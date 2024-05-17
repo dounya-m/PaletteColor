@@ -1,38 +1,63 @@
-.App {
+/* src/ColorPaletteGenerator.css */
+.palette-generator {
   text-align: center;
+  /* padding: 20px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.palette {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  /* margin: 20px 0; */
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* margin: 0 10px; */
   color: white;
+  font-weight: bold;
+  /* border-radius: 8px; */
+  height: 100vh;
+  width: 40vw;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  font-size: 72px;
+  cursor: pointer;
+  left: 5%;
+  position: absolute;
+  z-index: 100;
+  color: rgb(255, 255, 255);
+  top: 20%;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* src/index.css */
+.shape {
+  position: absolute;
+  opacity: 0.8;
+  background: none;
+  border: solid 10px;
+}
+.circle {
+  border-radius: 50%;
+  background: none;
+  border: solid 10px;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #4ade80; /* Tailwind green-400 */
+}
+.square {
+  width: 100px;
+  height: 100px;
+  background: none;
+  border: solid 10px;
 }
