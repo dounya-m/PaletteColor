@@ -26,27 +26,26 @@ export default function PaletteColor() {
   }
 
   return (
-    <div className="p-4 palette-generator">
-      <div className="grid grid-cols-5 gap-4 palette">
+    <div className="palette-generator">
+      <div className="grid grid-cols-5 palette">
         {colors.map((color, index) => (
           <div
             key={index}
-            className="p-4 cursor-pointer color-box"
+            className="cursor-pointer color-box"
             style={{ backgroundColor: color }}
             onClick={() => handleCopyColor(color)}
             
           >
-            <p
+            <span
             onClick={() => {
                 navigator.clipboard.writeText(color);
               }}>{color}
-              </p>
+              </span>
           </div>
         ))}
       </div>
       <button
         onClick={handleGenerateColors}
-        className="p-2 mt-4 text-white bg-blue-500 rounded"
       >
         Generate New Colors
       </button>
